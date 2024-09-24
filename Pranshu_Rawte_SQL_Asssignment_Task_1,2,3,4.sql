@@ -341,8 +341,8 @@ WHERE
 
 SELECT o.OrderDate, SUM(o.TotalAmount) AS ToatalRevenueGenerated
 FROM Orders o
-WHERE '2024-01-01' AND '2024-12-31'
-GROUP BY  o.OrderDate;
+WHERE o.OrderDate BETWEEN '2024-01-01' AND '2024-12-31'
+GROUP BY o.OrderDate;
 
 
 -- Task 4
